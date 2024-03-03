@@ -2,10 +2,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dev-web
-  namespace: dev-web
+  name: prod-web
+  namespace: prod-web
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: atlas-web
@@ -15,7 +15,7 @@ spec:
         app: atlas-web
     spec:
       containers:
-      - name: dev-web
+      - name: prod-web
         image: amb0u/react-app:latest
         ports:
         - containerPort: 3000
@@ -46,8 +46,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name:  dev-web
-  namespace: dev-web
+  name:  prod-web
+  namespace: prod-web
 spec:
   selector:
     app: atlas-web
@@ -59,11 +59,11 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: dev-web
-  namespace: dev-web
+  name: prod-web
+  namespace: prod-web
 spec:
   rules:
-  - host: "dev.atlascmms.com"
+  - host: "atlascmms.com"
     http:
       paths:
       # Path-based routing settings:
@@ -71,6 +71,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: dev-web
+            name: prod-web
             port:
               number: 3000
