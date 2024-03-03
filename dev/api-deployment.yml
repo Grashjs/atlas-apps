@@ -8,15 +8,15 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: atlas-api
+      app: dev-api
   template:
     metadata:
       labels:
-        app: atlas-api
+        app: dev-api
     spec:
       containers:
       - name: dev-api
-        image: amb0u/atlas-api:latest
+        image: amb0u/dev-api:latest
         ports:
         - containerPort: 8080
         env:
@@ -105,7 +105,7 @@ metadata:
   namespace: dev-api
 spec:
   selector:
-    app: atlas-api
+    app: dev-api
   type:  ClusterIP
   ports:
   - name:  http
@@ -118,7 +118,7 @@ metadata:
   namespace: dev-api
 spec:
   rules:
-  - host: "new-api.atlascmms.com"
+  - host: "dev-api.atlascmms.com"
     http:
       paths:
       - path: /
