@@ -5,7 +5,7 @@ metadata:
   name: dev-api
   namespace: dev-api
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: dev-api
@@ -92,11 +92,11 @@ spec:
               name: api-credentials   
         resources:
           limits:
-            cpu: "2"
-            memory: "2Gi"
+            cpu: "3"
+            memory: "3Gi"
           requests:
-            cpu: "2"
-            memory: "2Gi"
+            cpu: "3"
+            memory: "3Gi"
 ---
 apiVersion: v1
 kind: Service
