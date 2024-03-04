@@ -37,10 +37,10 @@ spec:
               name: web-credentials
         resources:
           limits:
-            cpu: "2"
+            cpu: "3"
             memory: "4Gi"
           requests:
-            cpu: "1.5"
+            cpu: "2"
             memory: "4Gi"    
 ---
 apiVersion: v1
