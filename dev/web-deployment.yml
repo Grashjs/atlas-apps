@@ -5,7 +5,7 @@ metadata:
   name: dev-web
   namespace: dev-web
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: atlas-web
@@ -37,11 +37,11 @@ spec:
               name: web-credentials
         resources:
           limits:
-            cpu: "3"
+            cpu: "4"
             memory: "4Gi"
           requests:
-            cpu: "2"
-            memory: "3Gi"    
+            cpu: "4"
+            memory: "4Gi"    
 ---
 apiVersion: v1
 kind: Service
