@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: dev-api
-        image: new/image:$RUN_NUMBER
+        image: amb0u/atlas-api:lastest
         ports:
         - containerPort: 8080
         env:
