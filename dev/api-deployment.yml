@@ -97,6 +97,10 @@ spec:
           requests:
             cpu: "3"
             memory: "3Gi"
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1 # or any desired value
 ---
 apiVersion: v1
 kind: Service
