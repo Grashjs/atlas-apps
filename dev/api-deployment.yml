@@ -92,11 +92,11 @@ spec:
               name: api-credentials   
         resources:
           limits:
-            cpu: "3"
-            memory: "3Gi"
+            cpu: "2"
+            memory: "2Gi"
           requests:
-            cpu: "3"
-            memory: "3Gi"
+            cpu: "2"
+            memory: "2Gi"
   strategy:
     type: RollingUpdate
     rollingUpdate:
