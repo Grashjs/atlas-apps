@@ -41,7 +41,12 @@ spec:
             memory: "4Gi"
           requests:
             cpu: "4"
-            memory: "4Gi"    
+            memory: "4Gi"
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 0
 ---
 apiVersion: v1
 kind: Service
