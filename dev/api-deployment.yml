@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: dev-api
-        image: amb0u/atlas-api:5555
+        image: amb0u/atlas-api:565555
         ports:
         - containerPort: 8080
         env:
