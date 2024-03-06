@@ -5,7 +5,7 @@ metadata:
   name: dev-api
   namespace: dev-api
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: dev-api
@@ -92,11 +92,11 @@ spec:
               name: api-credentials   
         resources:
           limits:
-            cpu: "2"
-            memory: "2Gi"
+            cpu: "1.5"
+            memory: "3Gi"
           requests:
-            cpu: "2"
-            memory: "2Gi"
+            cpu: "1.5"
+            memory: "3Gi"
   strategy:
     type: RollingUpdate
     rollingUpdate:
