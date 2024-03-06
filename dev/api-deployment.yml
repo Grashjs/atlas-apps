@@ -101,6 +101,7 @@ spec:
     type: RollingUpdate
     rollingUpdate:
       maxUnavailable: 1 # or any desired value
+      maxSurge: 0
 ---
 apiVersion: v1
 kind: Service
