@@ -23,7 +23,7 @@ spec:
           httpGet:
             path: /health-check
             port: 8080
-            scheme: HTTPS
+            scheme: HTTP
           initialDelaySeconds: 80
           timeoutSeconds: 5
           periodSeconds: 10
@@ -33,7 +33,7 @@ spec:
           httpGet:
             path: /health-check
             port: 8080
-            scheme: HTTPS
+            scheme: HTTP
           initialDelaySeconds: 80
           timeoutSeconds: 5
           periodSeconds: 10
