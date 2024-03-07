@@ -19,6 +19,14 @@ spec:
         image: amb0u/atlas-api:75
         ports:
         - containerPort: 8080
+        livenessProbe:
+          httpGet:
+            path: /health-check
+            port: 8080
+          initialDelaySeconds: 60
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
         env:
         - name: API_HOST
           valueFrom:
