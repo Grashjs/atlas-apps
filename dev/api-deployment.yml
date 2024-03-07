@@ -5,7 +5,7 @@ metadata:
   name: dev-api
   namespace: dev-api
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: dev-api
@@ -27,6 +27,12 @@ spec:
           periodSeconds: 30
           timeoutSeconds: 5
           failureThreshold: 3
+        readinessProbe:
+            httpGet:
+              path: /health-check
+              port: 8080
+            initialDelaySeconds: 60
+            periodSeconds: 30
         env:
         - name: API_HOST
           valueFrom:
