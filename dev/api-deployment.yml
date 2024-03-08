@@ -5,7 +5,7 @@ metadata:
   name: dev-api
   namespace: dev-api
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: dev-api
