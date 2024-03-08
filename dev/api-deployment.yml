@@ -123,7 +123,7 @@ metadata:
   namespace: dev-api
 spec:
   rules:
-  - host: "dev-api.atlascmms.com"
+  - host: "api.atlascmms.com"
     http:
       paths:
       - path: /
