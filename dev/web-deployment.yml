@@ -37,11 +37,11 @@ spec:
               name: web-credentials
         resources:
           limits:
-            cpu: "4"
-            memory: "5Gi"
+            cpu: "2"
+            memory: "3Gi"
           requests:
-            cpu: "3"
-            memory: "5Gi"
+            cpu: "2"
+            memory: "3Gi"
   strategy:
     type: RollingUpdate
     rollingUpdate:
