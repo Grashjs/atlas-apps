@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: dev-web
-        image: amb0u/react-app:57
+        image: amb0u/react-app:58
         ports:
         - containerPort: 3000
         env:
