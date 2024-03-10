@@ -38,10 +38,10 @@ spec:
         resources:
           limits:
             cpu: "2"
-            memory: "3Gi"
+            memory: "4Gi"
           requests:
             cpu: "2"
-            memory: "3Gi"
+            memory: "4Gi"
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -68,7 +68,7 @@ metadata:
   namespace: dev-web
 spec:
   rules:
-  - host: "atlascmms.com"
+  - host: "dev.atlascmms.com"
     http:
       paths:
       # Path-based routing settings:
