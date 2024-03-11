@@ -118,7 +118,7 @@ metadata:
   namespace: prod-api
 spec:
   rules:
-  - host: "atlascmms.com"
+  - host: "api.atlascmms.com"
     http:
       paths:
       - path: /
