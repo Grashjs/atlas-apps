@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: prod-api
-        image: amb0u/atlas-api:latest
+        image: amb0u/atlas-api:79
         ports:
         - containerPort: 8080
         env:
@@ -92,11 +92,11 @@ spec:
               name: api-credentials   
         resources:
           limits:
-            cpu: "1.5"
-            memory: "2Gi"
+            cpu: "2"
+            memory: "3Gi"
           requests:
-            cpu: "1.5"
-            memory: "2Gi"
+            cpu: "2"
+            memory: "3Gi"
 ---
 apiVersion: v1
 kind: Service
@@ -118,7 +118,7 @@ metadata:
   namespace: prod-api
 spec:
   rules:
-  - host: "prod-api.atlascmms.com"
+  - host: "atlascmms.com"
     http:
       paths:
       - path: /
