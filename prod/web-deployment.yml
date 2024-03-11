@@ -37,11 +37,11 @@ spec:
               name: web-credentials
         resources:
           limits:
-            cpu: "4"
-            memory: "8Gi"
+            cpu: "3" #2
+            memory: "7Gi" #4
           requests:
-            cpu: "4"
-            memory: "8Gi"
+            cpu: "3" #3
+            memory: "7Gi" #4
 ---
 apiVersion: v1
 kind: Service
