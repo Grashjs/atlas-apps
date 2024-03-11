@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: prod-web
-        image: amb0u/react-app:latest
+        image: amb0u/react-app:59
         ports:
         - containerPort: 3000
         env:
@@ -37,11 +37,11 @@ spec:
               name: web-credentials
         resources:
           limits:
-            cpu: "3"
+            cpu: "2"
             memory: "4Gi"
           requests:
             cpu: "2"
-            memory: "4Gi"    
+            memory: "4Gi"
 ---
 apiVersion: v1
 kind: Service
