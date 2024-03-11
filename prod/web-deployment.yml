@@ -8,11 +8,11 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: atlas-web
+      app: prod-web
   template:
     metadata:
       labels:
-        app: atlas-web
+        app: prod-web
     spec:
       containers:
       - name: prod-web
@@ -50,7 +50,7 @@ metadata:
   namespace: prod-web
 spec:
   selector:
-    app: atlas-web
+    app: prod-web
   type:  ClusterIP
   ports:
   - name:  http
