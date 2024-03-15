@@ -74,3 +74,14 @@ spec:
             name: prod-web
             port:
               number: 3000
+  - host: "www.atlascmms.com"
+    http:
+      paths:
+      # Path-based routing settings:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: prod-web
+            port:
+              number: 3000
