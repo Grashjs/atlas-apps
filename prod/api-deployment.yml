@@ -91,12 +91,9 @@ spec:
               key: SPRING_PROFILES_ACTIVE
               name: api-credentials   
         resources:
-          limits:
-            cpu: "4"
-            memory: "6Gi"
           requests:
-            cpu: "4"
-            memory: "6Gi"
+            cpu: "2.5"
+            memory: "2Gi"
 ---
 apiVersion: v1
 kind: Service
