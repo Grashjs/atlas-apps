@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: prod-api
-        image: amb0u/atlas-api:84
+        image: amb0u/atlas-api:85
         ports:
         - containerPort: 8080
         env:
@@ -92,11 +92,11 @@ spec:
               name: api-credentials   
         resources:
           limits:
-            cpu: "4"
-            memory: "6Gi"
+            cpu: "2"
+            memory: "3Gi"
           requests:
-            cpu: "4"
-            memory: "6Gi"
+            cpu: "2"
+            memory: "3Gi"
 ---
 apiVersion: v1
 kind: Service
