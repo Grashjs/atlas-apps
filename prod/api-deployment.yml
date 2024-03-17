@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: prod-api
-        image: amb0u/atlas-api:89
+        image: amb0u/atlas-api:90
         ports:
         - containerPort: 8080
         readinessProbe:
@@ -120,7 +120,7 @@ spec:
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxUnavailable: 1 # or any desired value
+      maxUnavailable: 1
       maxSurge: 0
 ---
 apiVersion: v1
