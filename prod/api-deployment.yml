@@ -5,7 +5,7 @@ metadata:
   name: prod-api
   namespace: prod-api
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: atlas
@@ -112,11 +112,11 @@ spec:
               name: api-credentials   
         resources:
           limits:
-            cpu: "4"
-            memory: "4Gi"
+            cpu: "2"
+            memory: "2Gi"
           requests:
             cpu: "2"
-            memory: "3Gi"
+            memory: "2Gi"
   strategy:
     type: RollingUpdate
     rollingUpdate:
