@@ -92,7 +92,7 @@ spec:
               name: api-credentials   
         resources:
           limits:
-            cpu: "6"
+            cpu: "5"
             memory: "5Gi"
           requests:
             cpu: "5"
