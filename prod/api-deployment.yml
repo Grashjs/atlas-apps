@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: prod-api
-        image: amb0u/atlas-api:121
+        image: amb0u/atlas-api:122
         ports:
         - containerPort: 8080
         env:
