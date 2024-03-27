@@ -68,7 +68,7 @@ metadata:
   namespace: prod-web
 spec:
   rules:
-  - host: "atlascmms.com"
+  - host: "dev.atlascmms.com"
     http:
       paths:
       # Path-based routing settings:
