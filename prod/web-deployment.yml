@@ -35,6 +35,11 @@ spec:
             secretKeyRef:
               key: REACT_APP_GOOGLE_TRACKING_ID
               name: web-credentials
+        - name: REACT_APP_JWT_SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              key: REACT_APP_JWT_SECRET_KEY
+              name: web-credentials
         resources:
           limits:
             cpu: "3" #2
