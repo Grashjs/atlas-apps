@@ -89,7 +89,12 @@ spec:
           valueFrom:
             secretKeyRef:
               key: SPRING_PROFILES_ACTIVE
-              name: api-credentials   
+              name: api-credentials
+        - name: JWT_SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              key: JWT_SECRET_KEY
+              name: api-credentials      
         resources:
           limits:
             cpu: "4"
