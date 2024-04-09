@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: prod-web
-        image: amb0u/react-app:111
+        image: amb0u/react-app:112
         ports:
         - containerPort: 3000
         env:
