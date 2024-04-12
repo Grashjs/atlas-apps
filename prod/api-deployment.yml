@@ -5,7 +5,7 @@ metadata:
   name: prod-api
   namespace: prod-api
 spec:
-  replicas: 4
+  replicas: 1
   selector:
     matchLabels:
       app: atlas
