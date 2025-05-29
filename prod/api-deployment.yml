@@ -2,8 +2,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: prod-api
-  namespace: prod-api
+  name: atlas-api
+  namespace: atlas
 spec:
   replicas: 1
   selector:
@@ -15,7 +15,7 @@ spec:
         app: atlas
     spec:
       containers:
-      - name: prod-api
+      - name: atlas-api
         image: amb0u/atlas-api:209
         ports:
         - containerPort: 8080
@@ -111,8 +111,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name:  prod-api
-  namespace: prod-api
+  name:  atla-api
+  namespace: atlas
 spec:
   selector:
     app: atlas
@@ -124,8 +124,8 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: prod-api
-  namespace: prod-api
+  name: atlas-api
+  namespace: atlas
 spec:
   rules:
   - host: "api.atlascmms.com"
@@ -135,6 +135,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: prod-api
+            name: atlas-api
             port:
               number: 8080
