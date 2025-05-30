@@ -5,7 +5,7 @@ metadata:
   name: atlas-api
   namespace: atlas
 spec:
-  replicas: 3
+  replicas: 10
   selector:
     matchLabels:
       app: atlas
