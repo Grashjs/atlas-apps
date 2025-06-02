@@ -20,10 +20,10 @@ spec:
         ports:
         - containerPort: 8080
         env:
-        - name: API_HOST
+        - name: CLOUD_VERSION
           valueFrom:
             secretKeyRef:
-              key: API_HOST
+              key: CLOUD_VERSION
               name: api-credentials
         - name: DB_PWD
           valueFrom:
@@ -40,6 +40,16 @@ spec:
             secretKeyRef:
               key: DB_USER
               name: api-credentials
+        - name: ENABLE_EMAIL_NOTIFICATIONS
+          valueFrom:
+            secretKeyRef:
+              key: ENABLE_EMAIL_NOTIFICATIONS
+              name: api-credentials
+        - name: ENABLE_SSO
+          valueFrom:
+            secretKeyRef:
+              key: ENABLE_SSO
+              name: api-credentials
         - name: FASTSPRING_PWD
           valueFrom:
             secretKeyRef:
@@ -49,11 +59,6 @@ spec:
           valueFrom:
             secretKeyRef:
               key: FASTSPRING_USER
-              name: api-credentials
-        - name: FRONT_URL
-          valueFrom:
-            secretKeyRef:
-              key: FRONT_URL
               name: api-credentials
         - name: GCP_BUCKET_NAME
           valueFrom:
@@ -70,10 +75,55 @@ spec:
             secretKeyRef:
               key: GCP_PROJECT_ID
               name: api-credentials
+        - name: INVITATION_VIA_EMAIL
+          valueFrom:
+            secretKeyRef:
+              key: INVITATION_VIA_EMAIL
+              name: api-credentials
+        - name: JWT_SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              key: JWT_SECRET_KEY
+              name: api-credentials
+        - name: LICENSE_FINGERPRINT_REQUIRED
+          valueFrom:
+            secretKeyRef:
+              key: LICENSE_FINGERPRINT_REQUIRED
+              name: api-credentials
+        - name: LICENSE_KEY
+          valueFrom:
+            secretKeyRef:
+              key: LICENSE_KEY
+              name: api-credentials
         - name: MAIL_RECIPIENTS
           valueFrom:
             secretKeyRef:
               key: MAIL_RECIPIENTS
+              name: api-credentials
+        - name: OAUTH2_CLIENT_ID
+          valueFrom:
+            secretKeyRef:
+              key: OAUTH2_CLIENT_ID
+              name: api-credentials
+        - name: OAUTH2_CLIENT_SECRET
+          valueFrom:
+            secretKeyRef:
+              key: OAUTH2_CLIENT_SECRET
+              name: api-credentials
+        - name: OAUTH2_PROVIDER
+          valueFrom:
+            secretKeyRef:
+              key: OAUTH2_PROVIDER
+              name: api-credentials
+        - name: PUBLIC_API_URL
+          valueFrom:
+            secretKeyRef:
+              key: PUBLIC_API_URL
+              name: api-credentials
+        - name: PUBLIC_FRONT_URL
+          valueFrom:
+            secretKeyRef:
+              key: PUBLIC_FRONT_URL
               name: api-credentials
         - name: SMTP_PWD
           valueFrom:
@@ -85,16 +135,11 @@ spec:
             secretKeyRef:
               key: SMTP_USER
               name: api-credentials
-        - name: SPRING_PROFILES_ACTIVE
+        - name: STORAGE_TYPE
           valueFrom:
             secretKeyRef:
-              key: SPRING_PROFILES_ACTIVE
-              name: api-credentials
-        - name: JWT_SECRET_KEY
-          valueFrom:
-            secretKeyRef:
-              key: JWT_SECRET_KEY
-              name: api-credentials      
+              key: STORAGE_TYPE
+              name: api-credentials  
         resources:
           #limits:
             #cpu: "4"
