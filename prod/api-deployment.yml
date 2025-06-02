@@ -5,7 +5,7 @@ metadata:
   name: atlas-api
   namespace: atlas
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: atlas
@@ -145,8 +145,8 @@ spec:
             #cpu: "4"
             #memory: "8Gi"
           requests:
-            cpu: "2"
-            memory: "4Gi"
+            cpu: "1"
+            memory: "2Gi"
   strategy:
     type: RollingUpdate
     rollingUpdate:
