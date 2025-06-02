@@ -146,7 +146,7 @@ spec:
             #memory: "8Gi"
           requests:
             cpu: "1"
-            memory: "2Gi"
+            memory: "1.5Gi"
   strategy:
     type: RollingUpdate
     rollingUpdate:
