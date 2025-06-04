@@ -139,7 +139,12 @@ spec:
           valueFrom:
             secretKeyRef:
               key: STORAGE_TYPE
-              name: api-credentials  
+              name: api-credentials
+        - name: LOGO_PATHS
+          valueFrom:
+            secretKeyRef:
+              key: LOGO_PATHS
+              name: api-credentials 
         resources:
           #limits:
             #cpu: "4"
